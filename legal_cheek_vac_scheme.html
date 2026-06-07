@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Legal Cheek Summer Vacation Scheme 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #0a0a0a;
+    --white: #f5f2eb;
+    --cream: #f0ead8;
+    --gold: #b8960c;
+    --gold-light: #e8c84a;
+    --red: #c0392b;
+    --ink: #1a1a1a;
+    --muted: #6b6558;
+    --rule: #d4cdbf;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--cream);
+    color: var(--ink);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: var(--black);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 2.5rem;
+    height: 52px;
+    border-bottom: 1px solid #333;
+  }
+  .nav-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 13px;
+    color: var(--gold-light);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a {
+    font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase;
+    color: #aaa; text-decoration: none; transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--white); }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    background: var(--black);
+    display: flex; flex-direction: column; justify-content: flex-end;
+    padding: 0 2.5rem 4rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background: repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 59px,
+      rgba(255,255,255,0.025) 59px,
+      rgba(255,255,255,0.025) 60px
+    );
+  }
+  .hero-overline {
+    font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--gold-light); margin-bottom: 1.5rem;
+    display: flex; align-items: center; gap: 1rem;
+  }
+  .hero-overline::before {
+    content: ''; display: block; width: 40px; height: 1px; background: var(--gold);
+  }
+  .hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(3.5rem, 8vw, 7.5rem);
+    font-weight: 900;
+    color: var(--white);
+    line-height: 0.92;
+    letter-spacing: -0.02em;
+    margin-bottom: 2rem;
+  }
+  .hero-title em {
+    font-style: italic;
+    color: var(--gold-light);
+  }
+  .hero-meta {
+    display: flex; gap: 3rem; align-items: center;
+    border-top: 1px solid #333;
+    padding-top: 2rem;
+    margin-top: 1rem;
+  }
+  .hero-meta-item { }
+  .hero-meta-label {
+    font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #666;
+    margin-bottom: 4px;
+  }
+  .hero-meta-value {
+    font-size: 14px; color: var(--white); font-weight: 400;
+  }
+  .hero-cta {
+    margin-left: auto;
+    background: var(--gold);
+    color: var(--black);
+    border: none; cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px; font-weight: 500;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    padding: 14px 28px;
+    transition: background 0.2s, transform 0.15s;
+  }
+  .hero-cta:hover { background: var(--gold-light); transform: translateY(-1px); }
+
+  /* SECTION WRAPPER */
+  section { padding: 5rem 2.5rem; }
+  .section-rule {
+    display: flex; align-items: center; gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+  .section-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 11px; color: var(--gold);
+    letter-spacing: 0.1em;
+  }
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 3vw, 2.8rem);
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.15;
+  }
+  hr.rule { border: none; border-top: 1px solid var(--rule); flex: 1; }
+
+  /* ABOUT */
+  .about { background: var(--white); }
+  .about-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 5rem;
+    align-items: start;
+  }
+  .about-body {
+    font-size: 15px; line-height: 1.85; color: #3a3530;
+  }
+  .about-body p + p { margin-top: 1.2rem; }
+  .about-stats {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 1.5px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+  }
+  .stat-box {
+    background: var(--white);
+    padding: 1.8rem;
+  }
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem; font-weight: 900;
+    color: var(--ink); line-height: 1;
+    margin-bottom: 6px;
+  }
+  .stat-label { font-size: 12px; color: var(--muted); letter-spacing: 0.05em; }
+
+  /* SCHEDULE */
+  .schedule { background: var(--cream); }
+  .day-tabs {
+    display: flex; gap: 0;
+    border: 1px solid var(--rule);
+    margin-bottom: 2rem;
+    overflow-x: auto;
+  }
+  .day-tab {
+    flex: 1; min-width: 120px;
+    padding: 12px 16px;
+    background: none; border: none;
+    border-right: 1px solid var(--rule);
+    cursor: pointer;
+    text-align: left;
+    transition: background 0.15s;
+  }
+  .day-tab:last-child { border-right: none; }
+  .day-tab.active { background: var(--black); }
+  .day-tab.active .tab-day { color: var(--gold-light); }
+  .day-tab.active .tab-name { color: var(--white); }
+  .day-tab:not(.active):hover { background: rgba(0,0,0,0.05); }
+  .tab-day { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 3px; }
+  .tab-name { font-size: 12px; font-weight: 500; color: var(--ink); }
+
+  .day-panel { display: none; }
+  .day-panel.active { display: block; }
+
+  .day-theme {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem; font-style: italic;
+    color: var(--muted); margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .session-list { list-style: none; }
+  .session-item {
+    display: grid; grid-template-columns: 110px 80px 1fr;
+    gap: 0;
+    border-bottom: 1px solid var(--rule);
+    transition: background 0.15s;
+  }
+  .session-item:hover { background: rgba(0,0,0,0.025); }
+  .session-item.break-item { background: rgba(0,0,0,0.03); }
+  .session-time {
+    padding: 14px 16px 14px 0;
+    font-size: 12px; color: var(--muted);
+    letter-spacing: 0.04em;
+    border-right: 1px solid var(--rule);
+  }
+  .session-badge-cell {
+    padding: 14px 12px;
+    border-right: 1px solid var(--rule);
+    display: flex; align-items: flex-start;
+  }
+  .badge {
+    font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500;
+    padding: 3px 8px;
+    white-space: nowrap;
+  }
+  .badge-ws { background: #e8f4f0; color: #1a6b54; }
+  .badge-talk { background: #fef9e7; color: #7d6608; }
+  .badge-expo { background: #fdf2f8; color: #7d3c98; }
+  .badge-fair { background: #eaf4fb; color: #1a5276; }
+  .badge-net { background: #fef5e7; color: #a04000; }
+  .badge-break { background: #f4f4f4; color: #888; }
+  .session-content { padding: 14px 16px; }
+  .session-name { font-size: 13px; font-weight: 500; color: var(--ink); margin-bottom: 3px; }
+  .session-speaker { font-size: 12px; color: var(--muted); }
+
+  /* SPEAKERS */
+  .speakers { background: var(--black); }
+  .speakers .section-title { color: var(--white); }
+  .speakers .section-num { color: var(--gold-light); }
+  .speakers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1px;
+    background: #222;
+    border: 1px solid #222;
+    margin-top: 2rem;
+  }
+  .speaker-card {
+    background: var(--black);
+    padding: 1.5rem;
+    transition: background 0.2s;
+  }
+  .speaker-card:hover { background: #141414; }
+  .speaker-initials {
+    width: 44px; height: 44px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 13px; font-weight: 500;
+    background: #1e1e1e; color: var(--gold-light);
+    border: 1px solid #333;
+    margin-bottom: 1rem;
+    font-family: 'Playfair Display', serif;
+  }
+  .speaker-name {
+    font-size: 13px; font-weight: 500; color: var(--white);
+    margin-bottom: 4px;
+    font-family: 'Playfair Display', serif;
+  }
+  .speaker-role { font-size: 11px; color: #666; line-height: 1.5; }
+
+  /* FIRMS */
+  .firms { background: var(--white); }
+  .firms-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+    margin-top: 2rem;
+  }
+  .firm-name {
+    background: var(--white);
+    padding: 1.2rem 1.4rem;
+    font-size: 12px; font-weight: 500;
+    color: var(--ink);
+    letter-spacing: 0.02em;
+    transition: background 0.15s, color 0.15s;
+  }
+  .firm-name:hover { background: var(--black); color: var(--white); }
+
+  /* HOW IT WORKS */
+  .howitworks { background: var(--cream); }
+  .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem; margin-top: 2rem; }
+  .step { padding: 2rem; border: 1px solid var(--rule); background: var(--white); }
+  .step-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem; font-weight: 900;
+    color: var(--rule); line-height: 1;
+    margin-bottom: 1rem;
+  }
+  .step-title { font-size: 14px; font-weight: 500; margin-bottom: 8px; }
+  .step-body { font-size: 13px; color: var(--muted); line-height: 1.7; }
+
+  /* FOOTER */
+  footer {
+    background: var(--black);
+    padding: 3rem 2.5rem;
+    border-top: 1px solid #222;
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 1rem;
+  }
+  .footer-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem; color: var(--gold-light);
+  }
+  .footer-text { font-size: 11px; color: #555; }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .hero-overline { animation: fadeUp 0.6s ease both; }
+  .hero-title { animation: fadeUp 0.7s 0.1s ease both; }
+  .hero-meta { animation: fadeUp 0.7s 0.25s ease both; }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">Legal Cheek</div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#schedule">Schedule</a></li>
+    <li><a href="#speakers">Speakers</a></li>
+    <li><a href="#firms">Firms</a></li>
+    <li><a href="#how">How it works</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <p class="hero-overline">Legal Cheek &times; University of Law — 2026</p>
+  <h1 class="hero-title">Summer<br><em>Vacation</em><br>Scheme</h1>
+  <div class="hero-meta">
+    <div class="hero-meta-item">
+      <div class="hero-meta-label">Dates</div>
+      <div class="hero-meta-value">8–12 June 2026</div>
+    </div>
+    <div class="hero-meta-item">
+      <div class="hero-meta-label">Format</div>
+      <div class="hero-meta-value">In person, 9am–5pm daily</div>
+    </div>
+    <div class="hero-meta-item">
+      <div class="hero-meta-label">Law fair</div>
+      <div class="hero-meta-value">Wednesday 10 June</div>
+    </div>
+    <div class="hero-meta-item">
+      <div class="hero-meta-label">Firms</div>
+      <div class="hero-meta-value">20+ participating</div>
+    </div>
+    <button class="hero-cta">Register now</button>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="section-rule">
+    <span class="section-num">01</span>
+    <hr class="rule">
+    <h2 class="section-title">About the scheme</h2>
+  </div>
+  <div class="about-grid">
+    <div class="about-body">
+      <p>Run in partnership with The University of Law, the Legal Cheek Summer Vacation Scheme brings together aspiring lawyers for five days of immersive, in-person learning alongside practitioners from the UK's leading firms.</p>
+      <p>Each day runs 9am to 5pm and features a mix of workshops, presentations, written exercises and networking. Sessions are led by trainees, associates and partners from firms including Jones Day, Willkie Farr &amp; Gallagher, BCLP, Foot Anstey and more.</p>
+      <p>Written exercises are set by ULaw, with model answers supplied at the end of the scheme. Students who attend all sessions receive a certificate of completion.</p>
+    </div>
+    <div class="about-stats">
+      <div class="stat-box"><div class="stat-num">5</div><div class="stat-label">Days in person</div></div>
+      <div class="stat-box"><div class="stat-num">20+</div><div class="stat-label">Participating firms</div></div>
+      <div class="stat-box"><div class="stat-num">18</div><div class="stat-label">Named speakers</div></div>
+      <div class="stat-box"><div class="stat-box"><div class="stat-num">1</div><div class="stat-label">Certificate on completion</div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="schedule" id="schedule">
+  <div class="section-rule">
+    <span class="section-num">02</span>
+    <hr class="rule">
+    <h2 class="section-title">Schedule</h2>
+  </div>
+
+  <div class="day-tabs" id="dayTabs">
+    <button class="day-tab active" data-day="0"><div class="tab-day">Mon 8 Jun</div><div class="tab-name">Commercial awareness</div></button>
+    <button class="day-tab" data-day="1"><div class="tab-day">Tue 9 Jun</div><div class="tab-name">Law in practice</div></button>
+    <button class="day-tab" data-day="2"><div class="tab-day">Wed 10 Jun</div><div class="tab-name">Law fair day</div></button>
+    <button class="day-tab" data-day="3"><div class="tab-day">Thu 11 Jun</div><div class="tab-name">In-house &amp; PE</div></button>
+    <button class="day-tab" data-day="4"><div class="tab-day">Fri 12 Jun</div><div class="tab-name">Closing day</div></button>
+  </div>
+
+  <!-- DAY 1 -->
+  <div class="day-panel active" data-panel="0">
+    <div class="day-theme">"Building the foundations of commercial thinking"</div>
+    <ul class="session-list">
+      <li class="session-item"><div class="session-time">9:00–9:45</div><div class="session-badge-cell"><span class="badge badge-net">Networking</span></div><div class="session-content"><div class="session-name">Arrival, registration &amp; morning refreshments</div><div class="session-speaker">All attendees</div></div></li>
+      <li class="session-item"><div class="session-time">9:45–10:00</div><div class="session-badge-cell"><span class="badge badge-talk">Presentation</span></div><div class="session-content"><div class="session-name">Welcome address</div><div class="session-speaker">The University of Law — Phyllida Roberts, deputy programme director</div></div></li>
+      <li class="session-item"><div class="session-time">10:00–11:00</div><div class="session-badge-cell"><span class="badge badge-talk">Presentation</span></div><div class="session-content"><div class="session-name">An introduction to commercial awareness</div><div class="session-speaker">Legal Cheek — Alex Aldridge, founder &amp; managing director</div></div></li>
+      <li class="session-item break-item"><div class="session-time">11:00–11:15</div><div class="session-badge-cell"><span class="badge badge-break">Break</span></div><div class="session-content"><div class="session-name">Coffee break</div><div class="session-speaker"></div></div></li>
+      <li class="session-item"><div class="session-time">11:15–12:30</div><div class="session-badge-cell"><span class="badge badge-ws">Workshop</span></div><div class="session-content"><div class="session-name">Deals — workshop &amp; written exercise</div><div class="session-speaker">Jones Day — Olivia Prioleau (associate) &amp; Axel Susini (trainee solicitor)</div></div></li>
+      <li class="session-item break-item"><div class="session-time">12:30–13:30</div><div class="session-badge-cell"><span class="badge badge-break">Break</span></div><div class="session-content"><div class="session-name">Lunch</div><div class="session-speaker"></div></div></li>
+      <li class="session-item"><div class="session-time">13:30–14:30</div><div class="session-badge-cell"><span class="badge badge-ws">Workshop</span></div><div class="session-content"><div class="session-name">Case study review with model answers</div><div class="session-speaker">The University of Law</div></div></li>
+      <li class="session-item"><div class="session-time">14:30–16:00</div><div class="session-badge-cell"><span class="badge badge-net">Networking</span></div><div class="session-content"><div class="session-name">Firm meet &amp; greet — open networking with sponsors</div><div class="session-speaker">All participating firms</div></div></li>
+      <li class="session-item"><div class="session-time">16:00–17:00</div><div class="session-badge-cell"><span class="badge badge-talk">Presentation</span></div><div class="session-content"><div class="session-name">End of day reflections &amp; Q&amp;A</div><div class="session-speaker">Legal Cheek &amp; ULaw</div></div></li>
+    </ul>
+  </div>
+
+  <!-- DAY 2 -->
+  <div class="day-panel" data-panel="1">
+    <div class="day-theme">"Where law meets technology, culture and society"</div>
+    <ul class="session-list">
+      <li class="session-item"><div class="session-time">9:00–9:30</div><div class="session-badge-cell"><span class="badge badge-net">Networking</span></div><div class="session-content"><div class="session-name">Morning check-in &amp; refreshments</div><div class="session-speaker">All attendees</div></div></li>
+      <li class="session-item"><div class="session-time">9:30–10:00</div><div class="session-badge-cell"><span class="badge badge-talk">Presentation</span></div><div class="session-content"><div class="session-name">Day briefing</div><div class="session-speaker">Legal Cheek</div></div></li>
+      <li class="session-item"><div class="session-time">10:00–11:00</div><div class="session-badge-cell"><span class="badge badge-ws">Workshop</span></div><div class="session-content"><div class="session-name">The legal reality of influencer campaigns</div><div class="session-speaker">Foot Anstey — Alexandra Hammond (partner) &amp; Emily Handy (trainee solicitor)</div></div></li>
+      <li class="session-item break-item"><div class="session-time">11:00–11:15</div><div class="session-badge-cell"><span class="badge badge-break">Break</span></div><div class="session-content"><div class="session-name">Coffee break</div><div class="session-speaker"></div></div></li>
+      <li class="session-item"><div class="session-time">11:15–12:30</div><div class="session-badge-cell"><span class="badge badge-ws">Workshop</span></div><div class="session-content"><div class="session-name">Written exercise on influencer law &amp; model answer review</div><div class="session-speaker">The University of Law</div></div></li>
+      <li class="session-item break-item"><div class="session-time">12:30–13:30</div><div class="session-badge-cell"><span class="badge badge-break">Break</span></div><div class="session-content"><div class="session-name">Lunch</div><div class="session-speaker"></div></div></li>
+      <li class="session-item"><div class="session-time">13:30–15:30</div><div class="session-badge-cell"><span class="badge badge-expo">Expo</span></div><div class="session-content"><div class="session-name">Employability expo</div><div class="session-speaker">The University of Law — careers &amp; recruitment teams</div></div></li>
+      <li class="session-item"><div class="session-time">15:30–16:30</div><div class="session-badge-cell"><span class="badge badge-net">Networking</span></div><div class="session-content"><div class="session-name">Informal drinks &amp; debrief</div><div class="session-speaker">All attendees</div></div></li>
+      <li class="session-item"><div class="session-time">16:30–17:00</div><div class="session-badge-cell"><span class="badge badge-talk">Presentation</span></div><div class="session-content"><div class="session-name">Day wrap-up</div><div class="session-speaker">Legal Cheek</div></div></li>
+    </ul>
+  </div>
+
+  <!-- DAY 3 -->
+  <div class="day-panel" data-panel="2">
+    <div class="day-theme">"Meet the firms — your most important networking day"</div>
+    <ul class="session-list">
+      <li class="session-item"><div class="session-time">9:00–9:30</div><div class="session-badge-cell"><span class="badge badge-net">Networking</span></div><div class="session-content"><div class="session-name">Morning check-in &amp; refreshments</div><div class="session-speaker">All attendees</div></div></li>
+      <li class="session-item"><div class="session-time">9:30–10:00</div><div class="session-badge-cell"><span class="badge badge-talk">Presentation</span></div><div class="session-content"><div class="session-name">How to get the most from a law fair</div><div class="session-speaker">Legal Cheek</div></div></li>
+      <li class="session-item"><div class="session-time">10:00–11:00</div><div class="session-badge-cell"><span class="badge badge-ws">Workshop</span></div><div class="session-content"><div class="session-name">Real estate disputes</div><div class="session-speaker">BCLP — Alex Selka &amp; Jessica Hopewell (senior associates)</div></div></li>
+      <li class="session-item break-item"><div class="session-time">11:00–11:15</div><div class="session-badge-cell"><span class="badge badge-break">Break</span></div><div class="session-content"><div class="session-name">Coffee break</div><div class="session-speaker"></div></div></li>
+      <li class="session-item"><div class="session-time">11:15–12:15</div><div class="session-badge-cell"><span class="badge badge-ws">Workshop</span></div><div class="session-content"><div class="session-name">Written exercise &amp; debrief</div><div class="session-speaker">The University of Law</div></div></li>
+      <li class="session-item break-item"><div class="session-time">12:15–13:15</div><div class="session-badge-cell"><span class="badge badge-break">Break</span></div><div class="session-content"><div class="session-name">Lunch</div><div class="session-speaker"></div></div></li>
+      <li class="session-item"><div class="session-time">13:15–15:15</div><div class="session-badge-cell"><span class="badge badge-fair">Law fair</span></div><div class="session-content"><div class="session-name">In-person law fair — 20 firms</div><div class="session-speaker">Addleshaw Goddard, Ashurst, BCLP, Burges Salmon, Clyde &amp; Co, Dentons, DWF, Eversheds Sutherland, Irwin Mitchell, Jones Day, Mayer Brown, Pinsent Masons, Slaughter and May, Travers Smith, Weil, White &amp; Case, Willkie Farr &amp; Gallagher, Winston Taylor, Womble Bond Dickinson</div></div></li>
+      <li class="session-item"><div class="session-time">15:15–17:00</div><div class="session-badge-cell"><span class="badge badge-net">Networking</span></div><div class="session-content"><div class="session-name">Post-fair networking &amp; drinks with all firms</div><div class="session-speaker">All firms &amp; attendees</div></div></li>
+    </ul>
+  </div>
+
+  <!-- DAY 4 -->
+  <div class="day-panel" data-panel="3">
+    <div class="day-theme">"Life beyond the traditional training contract"</div>
+    <ul class="session-list">
+      <li class="session-item"><div class="session-time">9:00–9:30</div><div class="session-badge-cell"><span class="badge badge-net">Networking</span></div><div class="session-content"><div class="session-name">Morning check-in &amp; refreshments</div><div class="session-speaker">All attendees</div></div></li>
+      <li class="session-item"><div class="session-time">9:30–10:00</div><div class="session-badge-cell"><span class="badge badge-talk">Presentation</span></div><div class="session-content"><div class="session-name">Day briefing</div><div class="session-speaker">Legal Cheek</div></div></li>
+      <li class="session-item"><div class="session-time">10:00–11:00</div><div class="session-badge-cell"><span class="badge badge-ws">Workshop</span></div><div class="session-content"><div class="session-name">In-house training — secondment routes explained</div><div class="session-speaker">Accutrainee — Jim Nash, Maria Castren &amp; Amara Ifeezue</div></div></li>
+      <li class="session-item break-item"><div class="session-time">11:00–11:15</div><div class="session-badge-cell"><span class="badge badge-break">Break</span></div><div class="session-content"><div class="session-name">Coffee break</div><div class="session-speaker"></div></div></li>
+      <li class="session-item"><div class="session-time">11:15–12:30</div><div class="session-badge-cell"><span class="badge badge-ws">Workshop</span></div><div class="session-content"><div class="session-name">Written exercise &amp; debrief</div><div class="session-speaker">The University of Law</div></div></li>
+      <li class="session-item break-item"><div class="session-time">12:30–13:30</div><div class="session-badge-cell"><span class="badge badge-break">Break</span></div><div class="session-content"><div class="session-name">Lunch</div><div class="session-speaker"></div></div></li>
+      <li class="session-item"><div class="session-time">13:30–14:30</div><div class="session-badge-cell"><span class="badge badge-talk">Presentation</span></div><div class="session-content"><div class="session-name">Private equity — how deals work</div><div class="session-speaker">Willkie Farr &amp; Gallagher — Harry Buchanan (associate) &amp; Xanthe Gabrielle-Beacher (trainee)</div></div></li>
+      <li class="session-item"><div class="session-time">14:30–15:30</div><div class="session-badge-cell"><span class="badge badge-ws">Workshop</span></div><div class="session-content"><div class="session-name">PE written exercise &amp; model answer</div><div class="session-speaker">The University of Law</div></div></li>
+      <li class="session-item"><div class="session-time">15:30–17:00</div><div class="session-badge-cell"><span class="badge badge-net">Networking</span></div><div class="session-content"><div class="session-name">Firm networking &amp; informal Q&amp;A</div><div class="session-speaker">All attendees</div></div></li>
+    </ul>
+  </div>
+
+  <!-- DAY 5 -->
+  <div class="day-panel" data-panel="4">
+    <div class="day-theme">"Fraud, alternatives, and looking ahead to your career"</div>
+    <ul class="session-list">
+      <li class="session-item"><div class="session-time">9:00–9:30</div><div class="session-badge-cell"><span class="badge badge-net">Networking</span></div><div class="session-content"><div class="session-name">Morning check-in &amp; refreshments</div><div class="session-speaker">All attendees</div></div></li>
+      <li class="session-item"><div class="session-time">9:30–10:00</div><div class="session-badge-cell"><span class="badge badge-talk">Presentation</span></div><div class="session-content"><div class="session-name">Day briefing</div><div class="session-speaker">Legal Cheek</div></div></li>
+      <li class="session-item"><div class="session-time">10:00–11:00</div><div class="session-badge-cell"><span class="badge badge-ws">Workshop</span></div><div class="session-content"><div class="session-name">Fraud — spotting it, litigating it</div><div class="session-speaker">Robert Hunter, former Allen &amp; Overy &amp; Herbert Smith Freehills partner; founder, City Disabilities</div></div></li>
+      <li class="session-item break-item"><div class="session-time">11:00–11:15</div><div class="session-badge-cell"><span class="badge badge-break">Break</span></div><div class="session-content"><div class="session-name">Coffee break</div><div class="session-speaker"></div></div></li>
+      <li class="session-item"><div class="session-time">11:15–12:30</div><div class="session-badge-cell"><span class="badge badge-ws">Workshop</span></div><div class="session-content"><div class="session-name">Written exercise &amp; debrief</div><div class="session-speaker">The University of Law</div></div></li>
+      <li class="session-item break-item"><div class="session-time">12:30–13:30</div><div class="session-badge-cell"><span class="badge badge-break">Break</span></div><div class="session-content"><div class="session-name">Lunch</div><div class="session-speaker"></div></div></li>
+      <li class="session-item"><div class="session-time">13:30–14:30</div><div class="session-badge-cell"><span class="badge badge-talk">Presentation</span></div><div class="session-content"><div class="session-name">Alternatives to corporate law</div><div class="session-speaker">Speaker to be announced</div></div></li>
+      <li class="session-item"><div class="session-time">14:30–15:15</div><div class="session-badge-cell"><span class="badge badge-ws">Workshop</span></div><div class="session-content"><div class="session-name">Written exercise &amp; model answer</div><div class="session-speaker">The University of Law</div></div></li>
+      <li class="session-item"><div class="session-time">15:15–16:00</div><div class="session-badge-cell"><span class="badge badge-net">Networking</span></div><div class="session-content"><div class="session-name">Farewell networking with ULaw future trainees</div><div class="session-speaker">Holly Willis (Mishcon), Charlie Cromwell-Pinder (Bird &amp; Bird), Layla Qazi (Winston Taylor), Millie Plummer (Birketts)</div></div></li>
+      <li class="session-item"><div class="session-time">16:00–17:00</div><div class="session-badge-cell"><span class="badge badge-talk">Presentation</span></div><div class="session-content"><div class="session-name">Certificate ceremony &amp; closing remarks</div><div class="session-speaker">Legal Cheek &amp; The University of Law</div></div></li>
+    </ul>
+  </div>
+</section>
+
+<section class="speakers" id="speakers">
+  <div class="section-rule">
+    <span class="section-num">03</span>
+    <hr class="rule" style="border-color:#333;">
+    <h2 class="section-title">Speakers</h2>
+  </div>
+  <div class="speakers-grid">
+    <div class="speaker-card"><div class="speaker-initials">OP</div><div class="speaker-name">Olivia Prioleau</div><div class="speaker-role">Corporate M&A associate, Jones Day</div></div>
+    <div class="speaker-card"><div class="speaker-initials">AI</div><div class="speaker-name">Amara Ifeezue</div><div class="speaker-role">Trainee solicitor seconded to Boutique Law via Accutrainee</div></div>
+    <div class="speaker-card"><div class="speaker-initials">PR</div><div class="speaker-name">Phyllida Roberts</div><div class="speaker-role">Deputy programme director, law conversion courses, ULaw</div></div>
+    <div class="speaker-card"><div class="speaker-initials">AH</div><div class="speaker-name">Alexandra Hammond</div><div class="speaker-role">Partner, commercial, tech &amp; data team, Foot Anstey</div></div>
+    <div class="speaker-card"><div class="speaker-initials">JH</div><div class="speaker-name">Jessica Hopewell</div><div class="speaker-role">Senior associate, real estate disputes, BCLP</div></div>
+    <div class="speaker-card"><div class="speaker-initials">AS</div><div class="speaker-name">Axel Susini</div><div class="speaker-role">Trainee solicitor, Jones Day</div></div>
+    <div class="speaker-card"><div class="speaker-initials">MC</div><div class="speaker-name">Maria Castren</div><div class="speaker-role">Trainee solicitor via Accutrainee; future trainee at Orrick</div></div>
+    <div class="speaker-card"><div class="speaker-initials">HB</div><div class="speaker-name">Harry Buchanan</div><div class="speaker-role">Associate, corporate &amp; financial services, Willkie Farr &amp; Gallagher</div></div>
+    <div class="speaker-card"><div class="speaker-initials">AS</div><div class="speaker-name">Alex Selka</div><div class="speaker-role">Senior associate, real estate disputes, BCLP</div></div>
+    <div class="speaker-card"><div class="speaker-initials">RH</div><div class="speaker-name">Robert Hunter</div><div class="speaker-role">Former A&amp;O &amp; HSF partner; founder &amp; trustee, City Disabilities</div></div>
+    <div class="speaker-card"><div class="speaker-initials">XG</div><div class="speaker-name">Xanthe Gabrielle-Beacher</div><div class="speaker-role">Trainee solicitor, Willkie Farr &amp; Gallagher</div></div>
+    <div class="speaker-card"><div class="speaker-initials">EH</div><div class="speaker-name">Emily Handy</div><div class="speaker-role">Trainee solicitor, Foot Anstey</div></div>
+    <div class="speaker-card"><div class="speaker-initials">HW</div><div class="speaker-name">Holly Willis</div><div class="speaker-role">Future trainee solicitor, Mishcon de Reya</div></div>
+    <div class="speaker-card"><div class="speaker-initials">MP</div><div class="speaker-name">Millie Plummer</div><div class="speaker-role">Future trainee solicitor, Birketts</div></div>
+    <div class="speaker-card"><div class="speaker-initials">AA</div><div class="speaker-name">Alex Aldridge</div><div class="speaker-role">Founder &amp; managing director, Legal Cheek</div></div>
+    <div class="speaker-card"><div class="speaker-initials">LQ</div><div class="speaker-name">Layla Qazi</div><div class="speaker-role">Future trainee solicitor, Winston Taylor</div></div>
+    <div class="speaker-card"><div class="speaker-initials">CP</div><div class="speaker-name">Charlie Cromwell-Pinder</div><div class="speaker-role">Future trainee solicitor, Bird &amp; Bird</div></div>
+    <div class="speaker-card"><div class="speaker-initials">JN</div><div class="speaker-name">Jim Nash</div><div class="speaker-role">Trainee solicitor seconded to [PIAS] via Accutrainee</div></div>
+  </div>
+</section>
+
+<section class="firms" id="firms">
+  <div class="section-rule">
+    <span class="section-num">04</span>
+    <hr class="rule">
+    <h2 class="section-title">Participating firms</h2>
+  </div>
+  <div class="firms-grid">
+    <div class="firm-name">Accutrainee</div>
+    <div class="firm-name">Addleshaw Goddard</div>
+    <div class="firm-name">Ashurst</div>
+    <div class="firm-name">BCLP</div>
+    <div class="firm-name">Burges Salmon</div>
+    <div class="firm-name">City Disabilities</div>
+    <div class="firm-name">Clyde &amp; Co</div>
+    <div class="firm-name">Dentons</div>
+    <div class="firm-name">DWF</div>
+    <div class="firm-name">Eversheds Sutherland</div>
+    <div class="firm-name">Foot Anstey</div>
+    <div class="firm-name">Irwin Mitchell</div>
+    <div class="firm-name">Jones Day</div>
+    <div class="firm-name">Mayer Brown</div>
+    <div class="firm-name">Pinsent Masons</div>
+    <div class="firm-name">Slaughter and May</div>
+    <div class="firm-name">Travers Smith</div>
+    <div class="firm-name">Weil</div>
+    <div class="firm-name">White &amp; Case</div>
+    <div class="firm-name">Willkie Farr &amp; Gallagher</div>
+    <div class="firm-name">Winston Taylor</div>
+    <div class="firm-name">Womble Bond Dickinson</div>
+  </div>
+</section>
+
+<section class="howitworks" id="how">
+  <div class="section-rule">
+    <span class="section-num">05</span>
+    <hr class="rule">
+    <h2 class="section-title">How it works</h2>
+  </div>
+  <div class="steps">
+    <div class="step"><div class="step-num">01</div><div class="step-title">Register online</div><div class="step-body">Sign up via the Legal Cheek website. Places are limited, so register early.</div></div>
+    <div class="step"><div class="step-num">02</div><div class="step-title">Attend in person</div><div class="step-body">All sessions take place in person from 9am to 5pm each day, 8–12 June 2026.</div></div>
+    <div class="step"><div class="step-num">03</div><div class="step-title">Complete exercises</div><div class="step-body">Written exercises are set by ULaw each day. Model answers are supplied at the end of the scheme.</div></div>
+    <div class="step"><div class="step-num">04</div><div class="step-title">Network with firms</div><div class="step-body">Daily networking slots and a dedicated law fair on Wednesday 10 June give you face time with 20+ firms.</div></div>
+    <div class="step"><div class="step-num">05</div><div class="step-title">Earn your certificate</div><div class="step-body">Students who attend all sessions receive a certificate of completion from Legal Cheek and ULaw.</div></div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">Legal Cheek</div>
+  <div class="footer-text">Summer Vacation Scheme 2026 — in partnership with The University of Law</div>
+  <div class="footer-text">© Legal Cheek 2026</div>
+</footer>
+
+<script>
+  const tabs = document.querySelectorAll('.day-tab');
+  const panels = document.querySelectorAll('.day-panel');
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const day = tab.dataset.day;
+      tabs.forEach(t => t.classList.remove('active'));
+      panels.forEach(p => p.classList.remove('active'));
+      tab.classList.add('active');
+      document.querySelector(`[data-panel="${day}"]`).classList.add('active');
+    });
+  });
+</script>
+</body>
+</html>
